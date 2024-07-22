@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <table>
+      <tr id="header">
+        <th colspan="3">
+          <header>
+            <h1><i>Welcome to Briana's Blog!</i></h1>
+          </header>
+        </th>
+      </tr>
+      <tr id="navigation">
+        <th colspan="3">
+          <span>
+            <a href="index.html">HOME</a>
+            <a href="portfolio.html">PORTFOLIO</a>
+            <a href="game.html">GAME</a>
+          </span>
+        </th>
+      </tr>
+      <tr id="content">
+        <td class="box">
+          <h4>Helpful Links to Learn HTML</h4>
+          <p>Website to Learn HTML:</p>
+          <ol>
+            <li>
+              <a href="https://www.w3schools.com/html/" target="_blank"
+                >W3Schools</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/Tutorials"
+                target="_blank"
+                >Mozilla Development Network (MDN)</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.codecademy.com/learn/learn-html"
+                target="_blank"
+                >Codecademy</a
+              >
+            </li>
+            <li><a href="https://html.com" target="_blank">HTML.com</a></li>
+            <li>
+              <a href="https://www.freecodecamp.org" target="_blank"
+                >FreeCodeCamp</a
+              >
+            </li>
+          </ol>
+          <p>Useful HTML Resources for Building a Website:</p>
+          <ul>
+            <li>
+              <a href="https://fonts.google.com" target="_blank"
+                >Google Fonts: free fonts</a
+              >
+            </li>
+            <li>
+              <a href="https://unsplash.com" target="_blank"
+                >Unsplash: high-resolution images</a
+              >
+            </li>
+            <li>
+              <a href="https://colorhunt.co" target="_blank"
+                >ColorHunt: curated color palettes</a
+              >
+            </li>
+          </ul>
+          <p>
+            <a href="https://htmlcheatsheet.com" target="_blank"
+              >HTML Cheatsheets</a
+            >
+          </p>
+        </td>
+        <td class="box">
+          <h3>About Me</h3>
+          <p>Hello!</p>
+          <p>
+            I’m Briana Monika Luckyta Wongkai from Indonesia! (call me Briana)
+            I’m currently a student at Ritsumeikan University, enrolled in the
+            ISSE program. I enjoy exploring new things and improving my skills.
+            Discovering new knowledge and sharing it with others, especially
+            when I can apply it in practical ways, brings me a lot of joy.
+          </p>
+          <p>
+            I LOVE listening to k-r&b music - it’s my way of relaxing after a
+            busy day. My go-to artists are offonoff, DEAN, and byebyebadman
+            (definitely worth a listen!). I also enjoy checking out the latest
+            viral hits if they catch my ear. Additionally, I’m an avid reader of
+            webtoons and manga, with a special love for romance and action
+            genres. Photography is another passion of mine; I enjoy capturing
+            moments and scenes that mesmerize me.
+          </p>
+          <p>
+            I also have a soft spot for cute cat-themed items. Lately, I’ve been
+            collecting mofusand items because they’re adorable and cat-related.
+            One day, I hope to turn this passion into reality by adopting a
+            black cat, a brown cat, a white cat, and maybe even an orange cat.
+            Life with these furry friends would be PURRfectly amazing!
+          </p>
+          <p>
+            P.S: Even though I have two dogs at home, I still dream of having a
+            cat.
+          </p>
+          <img class="image" src="assets/mofusand.jpeg" alt="" />
+        </td>
+        <td class="box">
+          <h3>Contact Me</h3>
+          <form id="contactForm">
+            <label for="Name">Name:</label><br />
+            <input type="text" id="Name" placeholder="Type in your name" required /><br />
+            <label for="email">Email:</label><br />
+            <input type="email" id="email" placeholder="Type in your email" required /><br />
+            <label for="Message">Message:</label><br />
+            <textarea id="Message" required></textarea><br />
+            <input type="submit" value="Submit" />
+            <input type="reset" value="Clear" />
+          </form>
+        </td>
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+              const form = document.getElementById('contactForm');
+              
+              form.addEventListener('submit', function(event) {
+                  event.preventDefault();
+                  
+                  const name = document.getElementById('Name').value;
+                  const email = document.getElementById('email').value;
+                  const message = document.getElementById('Message').value;
+                  
+                  if (name && email && message) {
+                      alert('Thank you for your message, ' + name );
+                      
+                      form.reset();
+                  } else {
+                      alert('Please fill out all fields before submitting.');
+                  }
+              });
+          });
+          </script>                  
+      </tr>
+      <tr id="footer">
+        <th colspan="3">
+          <footer>
+            <p>
+              <a href="https://www.instagram.com/briiiueo/" target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              Briana Wongkai
+            </p>
+            <p>&copy; Copyright Reserved</p>
+            <p>22 July 2024</p>
+          </footer>
+        </th>
+      </tr>
+    </table>
+  </body>
+</html>

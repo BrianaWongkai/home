@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <table>
+      <tr id="header">
+        <th colspan="3">
+          <header>
+            <h1><i>Game</i></h1>
+          </header>
+        </th>
+      </tr>
+      <tr id="navigation">
+        <th colspan="3">
+          <span>
+            <a href="index.html">HOME</a>
+            <a href="portfolio.html">PORTFOLIO</a>
+            <a href="game.html">GAME</a>
+          </span>
+        </th>
+      </tr>
+      <tr id="content">
+        <td class="box">
+          <div class="container">
+            <h1>Multiple-Choice Quiz</h1>
+            <form id="quiz-form">
+              <p>Enter your name:</p>
+              <input type="text" id="user-name" required />
+
+              <div class="question">
+                <p>1. Which country invented chopsticks?</p>
+                <div class="options">
+                  <label
+                    ><input type="radio" name="q1" value="0" /> Japan</label
+                  >
+                  <label
+                    ><input type="radio" name="q1" value="0" /> South
+                    Korea</label
+                  >
+                  <label
+                    ><input type="radio" name="q1" value="1" /> China</label
+                  >
+                  <label
+                    ><input type="radio" name="q1" value="0" /> Taiwan</label
+                  >
+                </div>
+              </div>
+
+              <div class="question">
+                <p>2. What is the world's largest desert?</p>
+                <div class="options">
+                  <label
+                    ><input type="radio" name="q2" value="0" /> Sahara</label
+                  >
+                  <label
+                    ><input type="radio" name="q2" value="1" />
+                    Antarctica</label
+                  >
+                  <label
+                    ><input type="radio" name="q2" value="0" /> Arabian</label
+                  >
+                  <label><input type="radio" name="q2" value="0" /> Gobi</label>
+                </div>
+              </div>
+
+              <div class="question">
+                <p>3. What vegetable was originally purple?</p>
+                <div class="options">
+                  <label
+                    ><input type="radio" name="q3" value="1" /> Carrot</label
+                  >
+                  <label
+                    ><input type="radio" name="q3" value="0" /> Potato</label
+                  >
+                  <label
+                    ><input type="radio" name="q3" value="0" /> Onion</label
+                  >
+                  <label
+                    ><input type="radio" name="q3" value="0" /> Cabbage</label
+                  >
+                </div>
+              </div>
+
+              <div class="question">
+                <p>4. What is the capital city of Australia?</p>
+                <div class="options">
+                  <label
+                    ><input type="radio" name="q4" value="0" /> Perth</label
+                  >
+                  <label
+                    ><input type="radio" name="q4" value="0" /> Melbourne</label
+                  >
+                  <label
+                    ><input type="radio" name="q4" value="1" /> Canberra</label
+                  >
+                  <label
+                    ><input type="radio" name="q4" value="0" /> Sydney</label
+                  >
+                </div>
+              </div>
+
+              <div class="question">
+                <p>5. Which country invented ice cream?</p>
+                <div class="options">
+                  <label><input type="radio" name="q5" value="0" /> USA</label>
+                  <label
+                    ><input type="radio" name="q5" value="0" /> Italy</label
+                  >
+                  <label
+                    ><input type="radio" name="q5" value="1" /> China</label
+                  >
+                  <label
+                    ><input type="radio" name="q5" value="0" /> France</label
+                  >
+                </div>
+              </div>
+
+              <button type="button" id="submit-btn">Submit</button>
+            </form>
+          </div>
+
+          <script>
+            document
+              .getElementById("submit-btn")
+              .addEventListener("click", function () {
+                const name = document.getElementById("user-name").value;
+                let score = 0;
+                const totalQuestions = 5;
+
+                for (let i = 1; i <= totalQuestions; i++) {
+                  const selectedOption = document.querySelector(
+                    `input[name="q${i}"]:checked`
+                  );
+                  if (selectedOption && selectedOption.value === "1") {
+                    score += 20;
+                  }
+                }
+
+                alert(`Hello ${name}! Your final score is ${score}.`);
+              });
+          </script>
+        </td>
+      </tr>
+      <tr id="footer">
+        <th colspan="3">
+          <footer>
+            <p>
+              <a href="https://www.instagram.com/briiiueo/" target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              Briana Wongkai
+            </p>
+            <p>&copy; Copyright Reserved</p>
+            <p>22 July 2024</p>
+          </footer>
+        </th>
+      </tr>
+    </table>
+  </body>
+</html>
